@@ -1,5 +1,6 @@
 import React, {Suspense} from "react";
-const RemoteApp = React.lazy(() => import("app2/App"));
+const Button = React.lazy(() => import("app2/Button"));
+const Alert = React.lazy(() => import("app2/Alert"));
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
         <h1>App1</h1>
       </div>
       <Suspense fallback={"loading..."}>
-        <RemoteApp/>
+        <Button/>
+        <Alert msg="Senura"/>
       </Suspense>
     </div>)
 }
