@@ -33,6 +33,8 @@ module.exports = {
         './App': './src/App',
         './Button': './src/Components/Button',
         './Alert': './src/Components/Alert',
+        './Navbar': './src/Components/Navbar',
+        './CardList': './src/Components/CardList',
       },
       shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
     }),
