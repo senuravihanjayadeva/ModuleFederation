@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
-const Alert = React.lazy(() => import("app1/Alert"));
 const Navbar = React.lazy(() => import("app1/Navbar"));
 const CardList = React.lazy(() => import("app1/CardList"));
+const Footer = React.lazy(() => import("app2/Footer"));
 
 const list = [
   {
@@ -35,10 +35,8 @@ const App = () => {
     <div>
       <Suspense fallback={"loading..."}>
         <Navbar organizationName="Media Unit" />
-        <div className="container">
-          <Alert alertType="primary" msg="Senura" />
-        </div>  
         <CardList list={list}/>
+        <Footer/>
       </Suspense>
     </div>)
 }
